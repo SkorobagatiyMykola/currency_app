@@ -1,9 +1,7 @@
 package ua.skorobahatyi.currency_app.entity;
 
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.Data;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -12,6 +10,8 @@ import java.util.Set;
 
 @Data
 @Entity(name = "currencies")
+@NoArgsConstructor
+@AllArgsConstructor
 public class Currency {
     @Id
     private Integer id;

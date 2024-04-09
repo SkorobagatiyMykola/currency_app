@@ -4,19 +4,14 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
-import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class CurrencyRateDto {
-    @JsonProperty("code")
-    private Integer code;
-
-    @JsonProperty("name")
-    private String name;
-
-    @JsonProperty("rate")
-    private BigDecimal rate;
+public class DateCurrencyRateDto {
+    @JsonProperty("date")
+    private LocalDate date;
+    @JsonProperty("currencies")
+    private List<CurrencyDto> currencyDtoList;
 }
